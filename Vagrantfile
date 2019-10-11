@@ -3,7 +3,7 @@ Vagrant.configure("2") do |config|
 	config.vm.network "private_network", ip:"IPADRESS"
 
 #set share folder
-	config.vm.synced_folder "~/Desktop/share", "/home/meli/vagrant/sharedfolder"
+	config.vm.synced_folder "/home/meli/vagrant/sharedfolder", "/home/vagrant/share"
 
 #config shell
 	config.vm.provision "shell", inline: <<-SHELL
